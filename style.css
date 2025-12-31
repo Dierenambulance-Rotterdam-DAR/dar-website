@@ -165,3 +165,36 @@ h1{ font-size: clamp(28px, 3.2vw, 44px); line-height: 1.1; margin:0 0 10px; }
 
 .card .btn{ margin-top: 10px; }
 
+/* ===== Mobiel: sticky belbalk onderin ===== */
+.mobile-bar{
+  display:none;
+}
+
+@media (max-width: 900px){
+  /* ruimte onderin zodat content niet achter de balk valt */
+  body{ padding-bottom: 74px; }
+
+  .mobile-bar{
+    display:flex;
+    position:fixed;
+    left:12px; right:12px; bottom:12px;
+    gap:10px;
+    z-index:9999;
+
+    background: rgba(255,255,255,.95);
+    border:1px solid var(--border);
+    border-radius: 999px;
+    padding:10px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+  }
+
+  .mobile-bar .btn{
+    flex:1;
+    justify-content:center;
+  }
+
+  /* net wat grotere tekst/knoppen op mobiel */
+  .btn{ padding: 12px 14px; }
+  .lead{ font-size: 17px; }
+}
