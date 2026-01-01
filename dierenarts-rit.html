@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dierenartsrit aanvragen – DAR</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<main class="container" style="padding:40px 0;">
+  <section class="card">
+    <h1>Dierenartsrit aanvragen</h1>
+
+    <p class="lead">
+      Vraag hier een rit aan voor vervoer van dier en eigenaar naar de dierenarts.
+    </p>
+
+    <div class="availability availability--warn">
+      ⚠️ Een aanvraag is geen definitieve afspraak.
+      Wij nemen contact met u op om de rit te bevestigen.
+    </div>
+
+    <form id="vetForm" class="form" style="margin-top:16px;">
+      <div class="grid-2">
+        <label>Naam*
+          <input id="name" required />
+        </label>
+
+        <label>Telefoon*
+          <input id="phone" required />
+        </label>
+
+        <label>Dier*
+          <input id="animal" placeholder="bijv. hond, kat" required />
+        </label>
+
+        <label>Dierenarts (optioneel)
+          <input id="vet" />
+        </label>
+
+        <label>Datum*
+          <input id="date" type="date" required />
+        </label>
+
+        <label>Tijdslot*
+          <select id="time" required>
+            <option value="">Kies tijd</option>
+            <option value="09:00">09:00 – 09:30</option>
+            <option value="09:30">09:30 – 10:00</option>
+            <option value="10:00">10:00 – 10:30</option>
+            <option value="10:30">10:30 – 11:00</option>
+            <option value="11:00">11:00 – 11:30</option>
+          </select>
+        </label>
+      </div>
+
+      <label>Opmerkingen
+        <textarea id="notes" rows="4"></textarea>
+      </label>
+
+      <button class="btn btn-secondary btn-big" type="submit">
+        Aanvraag versturen
+      </button>
+
+      <p id="status" class="small" style="margin-top:10px;"></p>
+    </form>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="vet-rit.js"></script>
+</body>
+</html>

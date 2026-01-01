@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin – Dierenambulance Rotterdam</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<main class="container" style="padding:40px 0;">
+  <section class="card">
+    <h1>Admin login</h1>
+
+    <form id="loginForm" class="form">
+      <label>
+        E-mail
+        <input id="email" type="email" required />
+      </label>
+
+      <label>
+        Wachtwoord
+        <input id="password" type="password" required />
+      </label>
+
+      <button class="btn btn-secondary" type="submit">
+        Inloggen
+      </button>
+
+      <p id="loginStatus" class="small"></p>
+    </form>
+  </section>
+
+  <section id="adminPanel" class="card" style="display:none; margin-top:20px;">
+    <h2>Dierenartsritten</h2>
+    <div id="rides"></div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="admin.js"></script>
+</body>
+</html>
