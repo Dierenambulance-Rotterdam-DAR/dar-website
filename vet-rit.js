@@ -35,7 +35,7 @@ form.addEventListener("submit", async (e) => {
     }
 
     const { error } = await sb
-      .from("vet_ritten")
+      .from("vet_rides")
       .insert([{
         name,
         phone,
@@ -57,3 +57,4 @@ form.addEventListener("submit", async (e) => {
     statusEl.textContent = "❌ Er ging iets mis. Probeer later opnieuw.";
   }
 });
+
